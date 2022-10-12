@@ -32,5 +32,5 @@
 ## Guide ed Editor Online
 https://www.overleaf.com/ 
 
-## Segnalazioni
+### Segnalazioni
 Segnalazioni d'errore e consigli sono bene accetti, poiche questo template è stato creato di fretta e furia. 
