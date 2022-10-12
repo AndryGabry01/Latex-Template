@@ -11,6 +11,7 @@
   buttati nella cartella principale
 
   Se tutto è impostato correttamente, dopo la prima compilazione, il filesystem risultera simile a questo:
+  ```
    Root
    |-(Dir)Config
      |-(fileconfig)
@@ -20,7 +21,7 @@
      |-(fileconfig)
    |-(File dove inserire i propri appunti)Appunti.tex
    |-(File dove inserire le costanti e da compilare per ottenere il pdf)main.tex
-
+```
 ### Informazioni
 - Nel file main.tex vanno impostate le costanti come \Insegnamento \Corso ed Etc
 - Gli appunti vanno inseriti nel file "Appunti.tex"
