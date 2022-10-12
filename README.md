@@ -1,4 +1,5 @@
 # Latex Template
+### Funzionamento
 1) Inserire i proprio appunti, nel file "Appunti.tex"
 2) Inserire i propri dati nelle costanti "main.tex" (es \Insegnamento) 
 3) Compilare il file "main.tex" per ottenere il file pdf
