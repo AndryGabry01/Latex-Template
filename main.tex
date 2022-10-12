@@ -1,0 +1,23 @@
+\newcommand{\foto}[1]{./Foto/#1}
+\newcommand{\config}[1]{./Config/#1}
+
+%importa le impostazioni
+\input{\config{config.tex}}
+%Costanti 
+%\newcommand{\AssetPath}{./Asset/} aggiunta futura per l'aggiunta di un path base degli asset
+%\newcommand{\LogoUniversita}{\AssetPath uniprLogo.png}
+\newcommand{\LogoUniversita}{uniprLogo.png}
+\newcommand{\NomeUniversita}{UNIVERSITÀ DI PARMA}
+\newcommand{\Dipartimento}{DIPARTIMENTO DI INGEGNERIA E ARCHITETTURA}
+\newcommand{\Corso}{Corso di Laurea Triennale in Ingegneria delle Tecnologie Informatiche}
+\newcommand{\AnnoAccademico}{2022/2023}
+\newcommand{\Insegnamento}{Matematica Applicata}
+\date{\today}
+\author{Andrea Gabriele}
+\title{Appunti di \Insegnamento}
+\begin{document}
+% input file frontespizio.tex Pagina Iniziale
+\input{\config{pifh.tex}}
+%Scrivi qui sotto 
+\input{Appunti.tex}
+\end{document}

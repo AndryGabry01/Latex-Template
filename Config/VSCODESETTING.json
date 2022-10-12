@@ -1,0 +1,111 @@
+  //INSERIRE NELLA CONFIGURAZIONE UTENTE DI VSCODE
+  // Define LaTeX compiling tools to be used in recipes. Each tool is labeled by its `name`. When invoked, `command` is spawned with arguments defined in `args` and environment variables defined in `env`. Typically no spaces should appear in each argument unless in paths. List of available placeholders: `%DOC%`, `%DOC_W32%, %DOC_EXT%`, `%DOC_EXT_W32%`, `%DOCFILE%`, `%DOCFILE_EXT%`, `%DIR%`, `%DIR_W32%`, `%TMPDIR%` and `%OUTDIR%`, `%OUTDIR_W32%`. For more details, please visit https://github.com/James-Yu/LaTeX-Workshop/wiki/Compile#placeholders.
+  "latex-workshop.latex.tools": [
+    {
+        "name": "latexmk",
+        "command": "latexmk",
+        "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "-pdf",
+            "-jobname=Appunti",
+            //"-outdir=%OUTDIR%",
+            "-outdir=Output",
+            //"-auxdir=.aux",
+            "%DOC%"
+        ],
+        "env": {}
+    },
+    {
+        "name": "lualatexmk",
+        "command": "latexmk",
+        "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "-lualatex",
+            "-outdir=%OUTDIR%",
+            "%DOC%"
+        ],
+        "env": {}
+    },
+    {
+        "name": "xelatexmk",
+        "command": "latexmk",
+        "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "-xelatex",
+            "-outdir=%OUTDIR%",
+            "%DOC%"
+        ],
+        "env": {}
+    },
+    {
+        "name": "latexmk_rconly",
+        "command": "latexmk",
+        "args": [
+            "%DOC%"
+        ],
+        "env": {}
+    },
+    {
+        "name": "pdflatex",
+        "command": "pdflatex",
+        "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "--aux-directory=.aux",
+            "%DOC%"
+        ],
+        "env": {}
+    },
+    {
+        "name": "bibtex",
+        "command": "bibtex",
+        "args": [
+            "%DOCFILE%"
+        ],
+        "env": {}
+    },
+    {
+        "name": "rnw2tex",
+        "command": "Rscript",
+        "args": [
+            "-e",
+            "knitr::opts_knit$set(concordance = TRUE); knitr::knit('%DOCFILE_EXT%')"
+        ],
+        "env": {}
+    },
+    {
+        "name": "jnw2tex",
+        "command": "julia",
+        "args": [
+            "-e",
+            "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"
+        ],
+        "env": {}
+    },
+    {
+        "name": "jnw2texmintex",
+        "command": "julia",
+        "args": [
+            "-e",
+            "using Weave; weave(\"%DOC_EXT%\", doctype=\"texminted\")"
+        ],
+        "env": {}
+    },
+    {
+        "name": "tectonic",
+        "command": "tectonic",
+        "args": [
+            "--synctex",
+            "--keep-logs",
+            "%DOC%.tex"
+        ],
+        "env": {}
+    }
+],
